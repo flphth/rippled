@@ -30,6 +30,7 @@ class Xrpl(ConanFile):
         'openssl/1.1.1v',
         'soci/4.0.3',
         'zlib/1.3.1',
+        'doctest/2.4.11',
     ]
 
     test_requires = [
@@ -109,6 +110,7 @@ class Xrpl(ConanFile):
         self.requires('lz4/1.10.0', force=True)
         self.requires('protobuf/3.21.9', force=True)
         self.requires('sqlite3/3.47.0', force=True)
+        self.requires('doctest/2.4.11', force=True)
         if self.options.jemalloc:
             self.requires('jemalloc/5.3.0')
         if self.options.rocksdb:

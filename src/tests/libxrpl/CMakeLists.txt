@@ -1,7 +1,7 @@
 include(xrpl_add_test)
 
 # Test requirements.
-find_package(doctest REQUIRED)
+find_package(doctest REQUIRED CONFIG)
 
 # Common library dependencies for the rest of the tests.
 add_library(xrpl.imports.test INTERFACE)
