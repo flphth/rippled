@@ -556,3 +556,26 @@ TRANSACTION(ttUNL_MODIFY, 102, UNLModify, Delegation::notDelegatable, ({
     {sfLedgerSequence, soeREQUIRED},
     {sfUNLModifyValidator, soeREQUIRED},
 }))
+
+/** This transaction type reads a MetadataRegistry (custom, non-standard) */
+TRANSACTION(ttMETADATA_REGISTRY_READ, 200, MetadataRegistryRead, Delegation::delegatable, ({
+    {sfRegistryId, soeREQUIRED},
+}))
+
+/** This transaction type creates or updates a MetadataRegistry */
+TRANSACTION(ttMETADATA_REGISTRY_UPDATE, 201, MetadataRegistryUpdate, Delegation::delegatable, ({
+    {sfRegistryId, soeREQUIRED},
+    {sfData, soeREQUIRED},
+    {sfVersion, soeREQUIRED},
+    {sfNewOwner, soeOPTIONAL},
+}))
+
+/** This transaction type claims a pending MetadataRegistry transfer */
+TRANSACTION(ttMETADATA_REGISTRY_CLAIM, 202, MetadataRegistryClaim, Delegation::delegatable, ({
+    {sfRegistryId, soeREQUIRED},
+}))
+
+/** This transaction type deletes a MetadataRegistry */
+TRANSACTION(ttMETADATA_REGISTRY_DELETE, 203, MetadataRegistryDelete, Delegation::delegatable, ({
+    {sfRegistryId, soeREQUIRED},
+}))
