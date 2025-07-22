@@ -557,11 +557,6 @@ TRANSACTION(ttUNL_MODIFY, 102, UNLModify, Delegation::notDelegatable, ({
     {sfUNLModifyValidator, soeREQUIRED},
 }))
 
-/** This transaction type reads a MetadataRegistry (custom, non-standard) */
-TRANSACTION(ttMETADATA_REGISTRY_READ, 200, MetadataRegistryRead, Delegation::delegatable, ({
-    {sfRegistryId, soeREQUIRED},
-}))
-
 /** This transaction type creates or updates a MetadataRegistry */
 TRANSACTION(ttMETADATA_REGISTRY_UPDATE, 201, MetadataRegistryUpdate, Delegation::delegatable, ({
     {sfRegistryId, soeREQUIRED},

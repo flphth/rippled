@@ -20,6 +20,7 @@ TER
 MetadataRegistryUpdate::doApply()
 {
     // TODO: Implémenter la logique de création/mise à jour du MetadataRegistry
+    JLOG(j_.info()) << "doApply MetadataRegistryUpdate appelé !";
     return tesSUCCESS;
 }
 
